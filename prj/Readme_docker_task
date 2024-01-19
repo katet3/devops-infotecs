@@ -1,0 +1,8 @@
+Сборка:
+docker build -t sqlite-builder .
+
+Запуск:
+docker run -it --rm sqlite-builder
+    После выхода контейнер будет уничтожен, если это не нужно то убрать
+    флаг --rm. При запуске контейнера в каталоге /app/ будет скомпилирован
+    .so, компилируется командой: gcc -shared -o libsqlite3.so -fPIC sqlite3.c
