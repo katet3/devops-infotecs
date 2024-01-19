@@ -90,10 +90,13 @@ docker run -it --rm sqlite-builder
 {
   "builders": [
     {
-      "iso_checksum": "sha256:07b94e6b1a0b0260b94c83d6bb76b26bf7a310dc78d7a9c74>
-      "iso_url": "http://mirror.linux-ia64.org/centos/7.9.2009/isos/x86_64/Cent>
+      "iso_checksum": "sha256:07b94e6b1a0b0260b94c83d6bb76b26bf7a310dc78d7a9c7432809fb9bc6194a",
+      "iso_url": "http://mirror.linux-ia64.org/centos/7.9.2009/isos/x86_64/CentOS-7-x86_64-Minimal-2009.iso",
       "type": "virtualbox-iso",
-      "ssh_username": "vagrant"
+      "ssh_username": "vagrant",
+      "memory": 2048,
+      "cpus": 2,
+      "disk_size": 20000
     }
   ],
   "post-processors": [
@@ -111,6 +114,7 @@ docker run -it --rm sqlite-builder
     }
   ]
 }
+
 ```
 
 
